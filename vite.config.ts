@@ -4,10 +4,6 @@ import { defineConfig } from "vite";
 export default defineConfig({
   base: "/necRomancer_roller/",
   build: {
-    lib: {
-      entry: "src/my-element.ts",
-      formats: ["es"],
-    },
     rollupOptions: {
       external: /^lit/,
     },
