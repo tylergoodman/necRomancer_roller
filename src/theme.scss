@@ -1,0 +1,42 @@
+@use "sass:color";
+
+
+
+[theme="custom-name"] {
+  --neutral-1: 255, 255, 255;
+  --neutral-2: 200, 200, 200;
+  --text-1: rgba(255, 255, 255, .9);
+  --text-2: rgba(255, 255, 255, .6);
+  --text-3: rgba(255, 255, 255, .2);
+  --body-1: normal 14px/24px;
+  --body-2: normal 12px/16px;
+  --header-1: bold 16px/24px;
+  --header-2: bold 14px/24px;
+  --border-radius: 2px;
+  --accent-1: 69, 69, 69;
+  --accent-1b: 144, 142, 140;
+  --base-0: 20, 20, 20;
+  --base-1: 20, 20, 20;
+  --base-2: 20, 20, 20;
+  --base-3: 20, 20, 20;
+  --base-4: 20, 20, 20;
+  // https://box-shadow.dev/
+  --shadow-1: 
+    inset 1px 0px 0px 0px var(--purple-transparent),
+    1px 0px 0px 0px var(--orange-transparent);
+
+  // custom
+  $colors: (
+    purple: rgba(131, 58, 180, 1),
+    red: rgba(253, 29, 29, 1),
+    orange: rgba(252, 176, 69, 1),
+    off-white: rgb(213, 204, 185),
+  );
+  @each $name, $color in $colors {
+    --#{'' + $name}: #{$color};
+    --#{'' + $name}-transparent: #{color.scale($color, $alpha: -40%)};
+  }
+  --border: solid 1px var(--off-white);
+  // https://cssgradient.io/
+  --cool-gradient: linear-gradient(90deg, var(--purple-transparent) 0%, var(--red) 50%, var(--orange-transparent) 100%) 1;
+}

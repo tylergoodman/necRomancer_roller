@@ -1,0 +1,62 @@
+$areas: desc, hit-label, damage-label, hit-roll, damage-rolls;
+@each $area in $areas {
+  .#{$area} {
+    grid-area: $area;
+  }
+}
+
+:host {
+  border-bottom: var(--border);
+  border-image: var(--cool-gradient);
+  display: grid;
+  grid:
+    "desc              desc" auto 
+    "hit-label damage-label" auto
+    "hit-rolls damage-rolls" auto
+    / 1fr 1fr;
+  padding: 6px 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h4, h5 {
+  margin: 0;
+}
+
+h5 span {
+  border-bottom: var(--border);
+  border-right: var(--border);
+  border-image: var(--cool-gradient);
+  padding: 3px;
+}
+
+.roll-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.roll {
+  align-content: center;
+  display: grid;
+  justify-items: center;
+  opacity: .9;
+  padding: 6px;
+
+  & :first-child { // the sum
+    font-size: 2em;
+    line-height: 1.25;
+  }
+  
+  &.best {
+    border-bottom: dotted 5px;
+    font-weight: bold;
+    opacity: 1;
+  }
+
+  & + & {
+    margin-left: 12px;
+  }
+}

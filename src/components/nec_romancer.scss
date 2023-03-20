@@ -1,0 +1,33 @@
+:host {
+  display: grid;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form {
+  & > * {
+    margin-top: 25px;
+
+    &:first-child {
+      margin: 0;
+    }
+
+    &.sub {
+      margin-top: 10px;
+      margin-left: 25px;
+      width: auto;
+    }
+  }
+}
+
+kor-input {
+  border-image: var(--cool-gradient);
+}
+
+kor-button {
+  justify-self: stretch;
+  max-width: none;
+  width: 100%;
+}

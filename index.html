@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Lit + TS</title>
-    <link rel="stylesheet" href="./src/index.css" />
-    <script type="module" src="/src/my-element.ts"></script>
-  </head>
-  <body>
-    <my-element>
-      <h1>Vite + Lit</h1>
-    </my-element>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/blushies.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NecRomancer Roller</title>
+  <link rel="stylesheet" href="src/index.scss" />
+  <link rel="stylesheet" href="src/theme.scss" />
+  <link rel="stylesheet" href="node_modules/@kor-ui/kor/kor-styles.css">
+  <script type="module" src="node_modules/reflect-metadata"></script>
+  <script type="module" src="src/components/nec_romancer.ts"></script>
+</head>
+
+<body theme="custom-name">
+  <nec-romancer></nec-romancer>
+</body>
+
 </html>
